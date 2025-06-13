@@ -1,0 +1,44 @@
+from algorithms import *
+from StocksClass import Stocks
+
+
+
+def main():
+    #stock = Stocks("AAPL", 10)
+    stock = Stocks("GOOG", 10)
+
+    print(stock)
+    print(stock.getSymbol())
+    df = simpleMovingAverage(stock)
+    print(df)
+
+    # Access some attributes or methods
+    print("Symbol:", stock.getSymbol())
+    print("Name:", stock.getName())
+    print("Price:", stock.getPrice())
+    print("Total value:", stock.get_value())
+    print("Recommendations: ", stock.getRecommendations())
+    print("RecommendationsSummary: ", stock.getRecommendationsSummary())
+    print(mostRecommendations(stock))
+    print(getDividendYield(stock))
+    print("Earnings:", stock.getEarnings())
+    print("Growth:", getNextYearGrowth(stock))
+    #print("Financials:", stock.getFinancials())
+    print("Income Statement:", stock.getIncome())
+    print("Earnings This Year:", getCurrentYearEarnings(stock))
+    print("Earnings Last Year:", getPreviousYearsEarnings(stock))
+    #print("Insider:", stock.getInsiders())
+    #print("Net Insider:", getNetInsiderPurchases(stock))
+    print(getInsiderConfidence(stock))
+    #print(current_ratio(stock))
+    #print("Price/Earning Ratio:", price_earnings_ratio(stock))
+    print("Return on Investment:", return_on_investments(stock))
+    #print("Return on Assets:", return_on_assets(stock))
+    print(stock.ticker.info)
+    #print(stock.getBalanceSheet())
+    print("Debt to Equity Ratio:", debtEquityRatio(stock))
+    #getAssestTurnoverRatio(stock)
+    print("other income statement:", stock.getIncomeStatement())
+    getAssestTurnoverRatio(stock)
+    print(stock.getBalanceSheet())
+main()
